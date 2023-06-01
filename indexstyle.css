@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+html{
+	display:flex;
+}
+body{
+    border: solid black;
+}
+div{
+    width: 800px;
+}
+
+#header{
+    text-align:center;
+    border-bottom: solid black;
+}
+
+#navigation_bar{
+    border-bottom: solid black;
+}
+
+ul,ul li{
+    margin : 0;
+    padding : 0;
+    list-style : none;
+    text-align: center;
+  }
+  ol li,ul li{
+    display : inline-block;
+  }
+
+
+#footer{
+    text-align:center;
+    border-top: solid black;
+}
+
+
