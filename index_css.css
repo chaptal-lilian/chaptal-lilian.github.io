@@ -22,35 +22,36 @@ body{
 .main_title{
     text-align: center;
 }
-.tab-container {
+.menu-container {
     width: 100%;
 }
-.tab-list {
-    display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
+.menu{
+    list-style: none;
+    padding: 0;
 }
-.tab-list li {
-    margin-right: 10px;
-}
-.tab-list li a {
-  display: inline-block;
-  padding: 10px;
-  background-color: #f2f2f2;
-  text-decoration: none;
-  color: #333;
-  border-radius: 5px 5px 0 0;
-}
-.tab-list li a:hover {
-    background-color: #e0e0e0;
-}
-.tab-content {
-    display: none;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 0 5px 5px 5px;
-}
-.tab-content.active {
+.menu-item {
+    display: inline-block;
+  }
+  
+  .menu-item a {
     display: block;
-}
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu-item.has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  .dropdown-menu li {
+    margin: 5px 0;
+  }
