@@ -47,11 +47,14 @@
                                         </ul>    
                                 </li>                      
                               <li class="menu-item"><a href="" data-lang='{"fr" : "Histoire",
-                                "eng" : "History", "esp" : "Historia", "ita" : "Storia"}'>Histoire</a></li>
+                                        "eng" : "History", "esp" : "Historia", "ita" : "Storia"}'
+                                        onclick="activerLien(this)" >Histoire</a></li>
                               <li class="menu-item"><a href="" data-lang='{"fr" : "Nos variétés",
-                                "eng" : "Our varieties", "esp" : "Nuestras variedades", "ita" : "Le nostre varietà"}'>Nos variétés</a></li>
+                                        "eng" : "Our varieties", "esp" : "Nuestras variedades", "ita" : "Le nostre varietà"}'
+                                        onclick="activerLien(this)" >Nos variétés</a></li>
                               <li class="menu-item"><a href="contact.html" data-lang='{"fr" : "Nous contacter",
-                                "eng" : "Contact us", "esp" : "Contáctenos", "ita" : "Contattaci"}'>Nous contacter</a></li>
+                                        "eng" : "Contact us", "esp" : "Contáctenos", "ita" : "Contattaci"}'
+                                        onclick="activerLien(this)" >Nous contacter</a></li>
                         </ul>
                 </div>  
         </div>  
@@ -151,5 +154,17 @@ logo.addEventListener('mouseleave', () => {
     element.classList.remove('shifted');
   });
 });
+
+//gestion de la mise en valeur d'un lien cliqué, ici les onglets
+function activerLien(lien) {
+            // Supprimer la classe "active" de tous les liens
+            let liens = document.querySelectorAll('.menu-item');
+            liens.forEach(function(item) {
+                item.classList.remove('active');
+            });
+            
+            // Ajouter la classe "active" au lien cliqué
+            lien.classList.add('active');
+        }
 
 </script>
