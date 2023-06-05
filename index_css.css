@@ -11,12 +11,15 @@ body{
     min-height: 100%;
 }
 .header{
-    margin-bottom: 20px;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
 }
 .header img{
-    display: inline-block;
-    vertical-align: middle;
+    margin-right: 10px;
+}
+.header h3{
+    margin: 0;
 }
 .main_title{
     text-align: center;
