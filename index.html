@@ -32,19 +32,20 @@
 </html>
 
 <script>
-        const dropdownItems = document.querySelectorAll('.has-dropdown');
+        
+const dropdownItems = document.querySelectorAll('.has-dropdown');
+let timeoutId;
 
-dropdownItems.forEach(item => {
+dropdownItems.forEach((item) => {
   item.addEventListener('mouseover', () => {
-    const arrow = item.querySelector("::after");
-    arrow.style.color = "green";
-    item.querySelector('.dropdown-menu').classList.add('show');
+        clearTimeout(timeoutId);
+        showDropdownMenu(item);
+    //item.querySelector('.dropdown-menu').classList.add('show');
   });
 
   item.addEventListener('mouseout', () => {
-    const arrow = item.querySelector("::after");
-    arrow.style.color = "";
-    item.querySelector('.dropdown-menu').classList.remove('show');
+        timeoutId = setTimeout(() => {hideDropdownMenu(item);}, 300);
+    //item.querySelector('.dropdown-menu').classList.remove('show');
   });
 });
 
@@ -59,4 +60,16 @@ menuItems.forEach(function(item) {
     this.style.color = '#333'; /* Retour à la couleur initiale */
   });
 });
+
+function showDropdownMenu(item) {
+  // Affiche le menu déroulant
+  const dropdownMenu = item.querySelector(".dropdown-menu");
+  dropdownMenu.style.display = "block";
+}
+function hideDropdownMenu(item) {
+  // Masque le menu déroulant
+  const dropdownMenu = item.querySelector(".dropdown-menu");
+  dropdownMenu.style.display = "none";
+}
+
 </script>
