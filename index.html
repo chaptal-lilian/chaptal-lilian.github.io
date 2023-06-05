@@ -36,10 +36,14 @@
 
 dropdownItems.forEach(item => {
   item.addEventListener('mouseover', () => {
+    const arrow = item.querySelector("::after");
+    arrow.style.color = "green";
     item.querySelector('.dropdown-menu').classList.add('show');
   });
 
   item.addEventListener('mouseout', () => {
+    const arrow = item.querySelector("::after");
+    arrow.style.color = "";
     item.querySelector('.dropdown-menu').classList.remove('show');
   });
 });
@@ -48,18 +52,11 @@ var menuItems = document.querySelectorAll('.menu li a');
 
 menuItems.forEach(function(item) {
   item.addEventListener('mouseover', function() {
-    const arrow = item.querySelector("::after");
-    const text = item.querySelector(".menu li a", ".menu li:hover a",
-".menu li:hover::after");
-    arrow.style.color = "green"; 
-    text.style.color = '#008000'; /* Couleur verte foncée au survol */
+    this.style.color = '#008000'; /* Couleur verte foncée au survol */
   });
 
   item.addEventListener('mouseout', function() {
-    const arrow = item.querySelector("::after");
-    const text = item.querySelector(".menu li a");
-    arrow.style.color = ""; 
-    text.style.color = '#333'; /* Retour à la couleur initiale */
+    this.style.color = '#333'; /* Retour à la couleur initiale */
   });
 });
 </script>
