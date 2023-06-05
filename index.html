@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>SCEA Niel et Filles</title>
+            <title>Marie-Christine Niel</title>
             <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
             <link rel="stylesheet" href="index_css.css" type="text/css" media="all" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -103,5 +103,15 @@ function changeLanguage(language) {
     }
   }
 }
+  document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.language-menu ul li a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      var language = this.getAttribute('data-lang');
+      changeLanguage(language);
+    });
+  }
+});
 
 </script>
