@@ -6,6 +6,10 @@ html, body{
 }
 body{
     flex: 1;
+    background-image: url("photo_vigne_1.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 .container{
     min-height: 100%;
@@ -22,6 +26,11 @@ body{
     margin: 0;
     flex-shrink: 0;
 }
+
+
+
+
+/* décalage d'image et de texte en haut, logo et titre Pepinieriste etc............................................... */
 .image-contain{
   position: relative;
   display: inline-block;
@@ -30,10 +39,10 @@ body{
   position:absolute;
   text-align: center;
   top: 0;
-  right: -101%;
+  right: -104%;
   width: 110%;
-  height: 96%;
-  background-color: green;
+  height: 93%;
+  background-color: transparent;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateX(-100%);
@@ -46,8 +55,14 @@ body{
   transform: translateX(0);
 }
 .main_title{
-margin-left: 100px;
+  transition: transform 0.2s ease;
 }
+.main_title.shifted {
+  transform: translateX(30%);
+}
+
+
+/* gestion des onglets et leurs menus déroulants ....................................................................................*/
 .menu-container {
     width: 100%;
 }
@@ -55,6 +70,7 @@ margin-left: 100px;
     display: flex;
     list-style: none;
     padding: 0;
+    justify-content: center;
 }
 .menu li a{
     text-decoration: none;
@@ -62,9 +78,11 @@ margin-left: 100px;
     white-space: nowrap;
     transition: color 0.3s ease;
 }
-.menu-item {
+.menu-item, .menu-item.menu-item.has-dropdown{
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 70px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
   }
   
   .menu-item a {
@@ -108,6 +126,7 @@ margin-left: 100px;
     transition: color 0.3s;
 }
 
+/* gestion de la langue du site ....................................................................................................;*/
 .language-menu {
     position: fixed;
     top: 10px;

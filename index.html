@@ -89,6 +89,7 @@ menuItems.forEach(function(item) {
 function showDropdownMenu(item) {
   // Affiche le menu déroulant
   const dropdownMenu = item.querySelector(".dropdown-menu");
+  
   dropdownMenu.style.display = "block";
 }
 function hideDropdownMenu(item) {
@@ -128,6 +129,27 @@ function changeLanguage(language) {
       changeLanguage(language);
     });
   }
+});
+
+//gestion du décalage du texte a cause de celui du logo
+const logo = document.querySelector('.logo');
+const textContainer = document.querySelector('.text-contain');
+const sideElements = document.querySelectorAll('.main_title');
+
+logo.addEventListener('mouseenter', () => {
+  textContainer.style.opacity = '1';
+  textContainer.style.transform = 'translateX(0)';
+  sideElements.forEach(element => {
+    element.classList.add('shifted');
+  });
+});
+
+logo.addEventListener('mouseleave', () => {
+  textContainer.style.opacity = '0';
+  textContainer.style.transform = 'translateX(100%)';
+  sideElements.forEach(element => {
+    element.classList.remove('shifted');
+  });
 });
 
 </script>
