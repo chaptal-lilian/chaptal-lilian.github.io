@@ -2,8 +2,15 @@
 html{
     display: flex;
 }
+body{
+    height: 100%;
+}
+.container{
+    min-height: 100%;
+}
 .header{
     text-align:center;
+    margin-bottom: 5px;
     border-bottom: 2px solid black;
 }
 .logo{
