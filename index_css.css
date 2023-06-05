@@ -14,10 +14,9 @@ body{
     margin-bottom: 20px;
     border-bottom: 2px solid black;
 }
-.header a{
-    width: 100px;
-    height: 100px;
-    float: left;
+.header img{
+    display: inline-block;
+    vertical-align: middle;
 }
 .main_title{
     text-align: center;
