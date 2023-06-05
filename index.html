@@ -9,34 +9,49 @@
     <body>
         <div class="container">
                 <div class="header">
-                        <a href="https://chaptal-lilian.github.io"><img src="logo1.jpg" alt="Logo" class="logo"></a>
+                        <div class="image-contain">
+                          <a href="https://chaptal-lilian.github.io"><img src="logo1.jpg" alt="Logo" class="logo"></a>
+                          <div class="text-contain">
+                            <p>Marie-Christine Niel</p>
+                          </div>
+                        </div>  
                         <h3 
-                          class="main_title" data-lang='{"fr": "Pépiniériste viticole, producteur de boutures greffables et de porte-greffe",
-                          "eng" : "Vineyard nurseryman, producer of graftable cuttings and rootstock",
-                          "esp" : "Viverista de viñedos, productor de esquejes injertables y portainjertos"}'>
-                          Pépiniériste viticole, producteur de boutures greffables et de porte-greffe
+                          class="main_title" data-lang='{"fr": "Pépiniériste viticole, producteur de boutures greffables et de greffons",
+                          "eng" : "Vineyard nurseryman, producer of graftable cuttings and scions",
+                          "esp" : "Viverista de viñedos, productor de esquejes y vástagos injertables", 
+                          "ita" : "Vignaiolo, produttore di talee innestabili e marze"}'>
+                          Pépiniériste viticole, producteur de boutures greffables et greffons
                         </h3>
                         <div class="language-menu">
                                 <ul>
                                   <li><a href="" class="active" onclick="changeLanguage('fr')">FR</a></li>
                                   <li><a href="" onclick="changeLanguage('eng')">ENG</a></li>
                                   <li><a href="" onclick="changeLanguage('esp')">ESP</a></li>
+                                  <li><a href="" onclick="changeLanguage('ita')">ITA</a></li>
                                 </ul>
                         </div> 
                 </div>
                 <div class="menu_container">
                         <ul class="menu">
                                 <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang='{"fr": "Accueil",
-                                  "eng" : "Home", "esp" : "Bienvenida"}'>Accueil</a></li>
-                                <li class="menu-item has-dropdown"><a href="">Nos produits</a>    
+                                  "eng" : "Home", "esp" : "Bienvenida", "ita" : "Accoglienza"}'>Accueil</a></li>
+                                <li class="menu-item has-dropdown"><a href="" data-lang='{"fr" : "Nos produits", 
+                                "eng" : "Our products", "esp" : "Nuestros productos", "ita" : "I nostri prodotti"}'>Nos produits</a>    
                                         <ul class="dropdown-menu">
-                                                <li><a href="">Bouture greffable</a></li>
-                                                <li><a href="">Porte-greffe</a></li>
+                                                <li><a href="" data-lang='{"fr" : "Boutures greffables",
+                                                "eng" : "Graftable cuttings", "esp" : "Esquejes injertables", 
+                                                "ita" : "Talee innestabili"}'>Boutures greffables</a></li>
+                                                <li><a href="" data-lang='{"fr" : "Boutures greffons",
+                                                  "eng" : "Graft cuttings", "esp" : "Esquejes de injerto", 
+                                                  "ita" : "Talee di innesto"}'>Boutures greffons</a></li>
                                         </ul>    
                                 </li>                      
-                              <li class="menu-item"><a href="">Histoire</a></li>
-                              <li class="menu-item"><a href="">Nos variétés</a></li>
-                              <li class="menu-item"><a href="">Nous contacter</a></li>
+                              <li class="menu-item"><a href="" data-lang='{"fr" : "Histoire",
+                                "eng" : "History", "esp" : "Historia", "ita" : "Storia"}'>Histoire</a></li>
+                              <li class="menu-item"><a href="" data-lang='{"fr" : "Nos variétés",
+                                "eng" : "Our varieties", "esp" : "Nuestras variedades", "ita" : "Le nostre varietà"}'>Nos variétés</a></li>
+                              <li class="menu-item"><a href="" data-lang='{"fr" : "Nous contacter",
+                                "eng" : "Contact us", "esp" : "Contáctenos", "ita" : "Contattaci"}'>Nous contacter</a></li>
                         </ul>
                 </div>  
         </div>  
@@ -52,12 +67,10 @@ dropdownItems.forEach((item) => {
   item.addEventListener('mouseover', () => {
         clearTimeout(timeoutId);
         showDropdownMenu(item);
-    //item.querySelector('.dropdown-menu').classList.add('show');
   });
 
   item.addEventListener('mouseout', () => {
         timeoutId = setTimeout(() => {hideDropdownMenu(item);}, 100);
-    //item.querySelector('.dropdown-menu').classList.remove('show');
   });
 });
 
@@ -83,6 +96,8 @@ function hideDropdownMenu(item) {
   const dropdownMenu = item.querySelector(".dropdown-menu");
   dropdownMenu.style.display = "none";
 }
+
+// changement de langue
 function changeLanguage(language) {
   var elements = document.querySelectorAll('[data-lang]');
 
@@ -103,6 +118,7 @@ function changeLanguage(language) {
     }
   }
 }
+// gestion des clics du changement de language -> éviter le rafraichissement directement après
   document.addEventListener('DOMContentLoaded', function() {
   var links = document.querySelectorAll('.language-menu ul li a');
   for (var i = 0; i < links.length; i++) {

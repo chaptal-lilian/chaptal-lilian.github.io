@@ -22,8 +22,31 @@ body{
     margin: 0;
     flex-shrink: 0;
 }
+.image-contain{
+  position: relative;
+  display: inline-block;
+}
+.text-contain{
+  position:absolute;
+  text-align: center;
+  top: 0;
+  right: -101%;
+  width: 110%;
+  height: 96%;
+  background-color: green;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-100%);
+}
+.text-contain p{
+  font-weight: bold;
+}
+.image-contain:hover .text-contain{
+  opacity: 1;
+  transform: translateX(0);
+}
 .main_title{
-    text-align: center;
+margin-left: 100px;
 }
 .menu-container {
     width: 100%;
