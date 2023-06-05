@@ -66,3 +66,15 @@ body{
   .dropdown-menu li {
     margin: 5px 0;
   }
+
+  .menu li.has-dropdown > a::after {
+    content: "\25BC"; /* Code Unicode pour la flèche vers le bas */
+    display: inline-block;
+    margin-left: 3px; /* Ajustez la marge selon vos besoins */
+    transform: rotate(45deg); /* Incliner la flèche */
+  }
+  .menu li.has-dropdown > a::after {
+    font-size: 10px;
+    line-height: 1;
+    vertical-align: middle;
+  }
