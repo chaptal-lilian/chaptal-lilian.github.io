@@ -59,7 +59,7 @@
 </html>
 
 <script>
-        
+//vitesse de déplacement des menus déroulants
 const dropdownItems = document.querySelectorAll('.has-dropdown');
 let timeoutId;
 
@@ -74,7 +74,7 @@ dropdownItems.forEach((item) => {
   });
 });
 
-var menuItems = document.querySelectorAll('.menu li a');
+var menuItems = document.querySelectorAll('.menu-item a');
 
 menuItems.forEach(function(item) {
   item.addEventListener('mouseover', function() {
@@ -82,7 +82,7 @@ menuItems.forEach(function(item) {
   });
 
   item.addEventListener('mouseout', function() {
-    this.style.color = '#333'; /* Retour à la couleur initiale */
+    this.style.color = 'white'; /* Retour à la couleur initiale */
   });
 });
 

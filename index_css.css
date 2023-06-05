@@ -74,7 +74,7 @@ body{
 }
 .menu li a{
     text-decoration: none;
-    color: #333;
+    color: white;
     white-space: nowrap;
     transition: color 0.3s ease;
 }
@@ -100,7 +100,7 @@ body{
     display: none;
     position: absolute;
     list-style: none;
-    background-color: #f2f2f2;
+    background-color: gray;
     padding: 10px;
     margin-top: 5px;
   }
@@ -116,6 +116,7 @@ body{
   .menu li.has-dropdown::after {
     content: "\25BE"; /* Flèche vers le bas en utilisant le caractère Unicode */
     position: absolute;
+    color: white;
     top: 50%;
     right: -8px;
     transform: translateY(-50%);
