@@ -11,6 +11,13 @@
                 <div class="header">
                         <a href="https://chaptal-lilian.github.io"><img src="logo1.jpg" alt="Logo" class="logo"></a>
                         <h3 class="main_title">Pépiniériste viticole, producteur de boutures greffables et de porte-greffe</h3>
+                        <div class="language-menu">
+                                <ul>
+                                  <li><a href="" class="active" onclick="changeLanguage('fr')">FR</a></li>
+                                  <li><a href="" onclick="changeLanguage('all')">ENG</a></li>
+                                  <li><a href="" onclick="changeLanguage('esp')">ESP</a></li>
+                                </ul>
+                        </div> 
                 </div>
                 <div class="menu_container">
                         <ul class="menu">
@@ -25,14 +32,7 @@
                               <li class="menu-item"><a href="">Nos variétés</a></li>
                               <li class="menu-item"><a href="">Nous contacter</a></li>
                         </ul>
-                </div>
-                <div class="language-menu">
-                        <ul>
-                          <li><a href="" class="active">FR</a></li>
-                          <li><a href="">ALL</a></li>
-                          <li><a href="">ESP</a></li>
-                        </ul>
-                </div>   
+                </div>  
         </div>  
     </body>
 </html>
@@ -50,7 +50,7 @@ dropdownItems.forEach((item) => {
   });
 
   item.addEventListener('mouseout', () => {
-        timeoutId = setTimeout(() => {hideDropdownMenu(item);}, 150);
+        timeoutId = setTimeout(() => {hideDropdownMenu(item);}, 100);
     //item.querySelector('.dropdown-menu').classList.remove('show');
   });
 });
@@ -77,5 +77,28 @@ function hideDropdownMenu(item) {
   const dropdownMenu = item.querySelector(".dropdown-menu");
   dropdownMenu.style.display = "none";
 }
+function changeLanguage(language) {
+  if (language === 'fr') {
+    // Code pour la langue française
+    document.getElementById('header').innerHTML = 'Bienvenue';
+    document.getElementById('description').innerHTML = 'Ceci est une description en français.';
+  } else if (language === 'all') {
+    // Code pour la langue anglaise
+    document.getElementById('header').innerHTML = 'Welcome';
+    document.getElementById('description').innerHTML = 'This is a description in English.';
+  } else if (language === 'esp') {
+    // Code pour la langue espagnole
+    document.getElementById('header').innerHTML = 'Bienvenido';
+    document.getElementById('description').innerHTML = 'Esto es una descripción en español.';
+  }
 
+  // Mettre à jour la classe active du lien cliqué
+  var links = document.querySelectorAll('.language-menu ul li a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].classList.remove('active');
+    if (links[i].textContent === language.toUpperCase()) {
+      links[i].classList.add('active');
+    }
+  }
+}
 </script>
