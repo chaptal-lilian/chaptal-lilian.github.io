@@ -26,7 +26,10 @@
                                 <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang="fr">Accueil</a></li>
                                 <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang="eng">Home</a></li>
                                 <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang="esp">Bienvenida</a></li>
+                                <li class="menu-item has-dropdown"><a href="">Nos produits</a>  
                                 <li class="menu-item has-dropdown"><a href="">Nos produits</a>    
+                                <li class="menu-item has-dropdown"><a href="">Nos produits</a>    
+  
                                         <ul class="dropdown-menu">
                                                 <li><a href="">Bouture greffable</a></li>
                                                 <li><a href="">Porte-greffe</a></li>
@@ -82,10 +85,7 @@ function hideDropdownMenu(item) {
   dropdownMenu.style.display = "none";
 }
 function changeLanguage(language) {
-  // Récupérer tous les éléments avec l'attribut data-lang
   var elements = document.querySelectorAll('[data-lang]');
-
-  // Parcourir les éléments et modifier leur contenu en fonction de la langue choisie
   for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
     var text = element.getAttribute('data-lang');
