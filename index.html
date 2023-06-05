@@ -10,9 +10,11 @@
         <div class="container">
                 <div class="header">
                         <a href="https://chaptal-lilian.github.io"><img src="logo1.jpg" alt="Logo" class="logo"></a>
-                        <h3 class="main_title" data-lang="fr">Pépiniériste viticole, producteur de boutures greffables et de porte-greffe</h3>
-                        <h3 class="main_title" data-lang="eng">Vineyard nurseryman, producer of graftable cuttings and rootstock</h3>
-                        <h3 class="main_title" data-lang="esp">Viverista de viñedos, productor de esquejes injertables y portainjertos</h3>
+                        <h3 
+                          class="main_title" data-lang='{"fr": "Pépiniériste viticole, producteur de boutures greffables et de porte-greffe",
+                          "eng" : "Vineyard nurseryman, producer of graftable cuttings and rootstock",
+                          "esp" : "Viverista de viñedos, productor de esquejes injertables y portainjertos"}'>
+                        </h3>
                         <div class="language-menu">
                                 <ul>
                                   <li><a href="" class="active" onclick="changeLanguage('fr')">FR</a></li>
@@ -23,9 +25,8 @@
                 </div>
                 <div class="menu_container">
                         <ul class="menu">
-                                <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang="fr">Accueil</a></li>
-                                <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang="eng">Home</a></li>
-                                <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang="esp">Bienvenida</a></li>
+                                <li class="menu-item"><a href="https://chaptal-lilian.github.io" data-lang='{"fr": "Accueil",
+                                  "eng" : "Home", "esp" : "Bienvenida"}'>Accueil</a></li>
                                 <li class="menu-item has-dropdown"><a href="">Nos produits</a>  
                                 <li class="menu-item has-dropdown"><a href="">Nos produits</a>    
                                 <li class="menu-item has-dropdown"><a href="">Nos produits</a>    
@@ -86,16 +87,16 @@ function hideDropdownMenu(item) {
 }
 function changeLanguage(language) {
   var elements = document.querySelectorAll('[data-lang]');
+
   for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
-    var text = element.getAttribute('data-lang');
+    var translations = JSON.parse(element.getAttribute('data-lang'));
 
-    if (text === language) {
-      element.style.display = 'block';
-    } else {
-      element.style.display = 'none';
+    if (translations.hasOwnProperty(language)) {
+      element.innerText = translations[language];
     }
   }
+
   var links = document.querySelectorAll('.language-menu ul li a');
   for (var j = 0; j < links.length; j++) {
     links[j].classList.remove('active');
@@ -104,4 +105,5 @@ function changeLanguage(language) {
     }
   }
 }
+
 </script>
