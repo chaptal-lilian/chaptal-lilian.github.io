@@ -40,12 +40,12 @@ body{
 }
 .menu-item {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 40px;
   }
   
   .menu-item a {
     display: block;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
     color: #333;
   }
@@ -63,7 +63,7 @@ body{
   }
   
   .dropdown-menu li {
-    margin: 5px 0;
+    margin: 5px;
   }
 
   .menu li.has-dropdown {
@@ -76,4 +76,9 @@ body{
     top: 50%;
     right: -8px;
     transform: translateY(-50%);
+    transition: color 0.3s;
   }
+  .menu li:hover a,
+.menu li:hover::after {
+    transition: color 0.3s;
+}

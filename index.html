@@ -15,13 +15,15 @@
                 <div class="menu_container">
                         <ul class="menu">
                                 <li class="menu-item"><a href="https://chaptal-lilian.github.io">Accueil</a></li>
-                                <li class="menu-item has-dropdown"><a href="">Produits</a>    
+                                <li class="menu-item has-dropdown"><a href="">Nos produits</a>    
                                         <ul class="dropdown-menu">
                                                 <li><a href="">Bouture greffable</a></li>
                                                 <li><a href="">Porte-greffe</a></li>
                                         </ul>    
                                 </li>                      
                               <li class="menu-item"><a href="">Histoire</a></li>
+                              <li class="menu-item"><a href="">Nos variétés</a></li>
+                              <li class="menu-item"><a href="">Nous contacter</a></li>
                         </ul>
                 </div>
                 </div>
@@ -46,11 +48,18 @@ var menuItems = document.querySelectorAll('.menu li a');
 
 menuItems.forEach(function(item) {
   item.addEventListener('mouseover', function() {
-    this.style.color = '#008000'; /* Couleur verte foncée au survol */
+    const arrow = item.querySelector("::after");
+    const text = item.querySelector(".menu li a", ".menu li:hover a",
+".menu li:hover::after");
+    arrow.style.color = "green"; 
+    text.style.color = '#008000'; /* Couleur verte foncée au survol */
   });
 
   item.addEventListener('mouseout', function() {
-    this.style.color = '#333'; /* Retour à la couleur initiale */
+    const arrow = item.querySelector("::after");
+    const text = item.querySelector(".menu li a");
+    arrow.style.color = ""; 
+    text.style.color = '#333'; /* Retour à la couleur initiale */
   });
 });
 </script>
