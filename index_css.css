@@ -6,6 +6,7 @@ html{
     text-align:center;
     border-bottom: 2px solid black;
 }
-.header a{
-    float: left;
+.logo{
+    width: 100px;
+    height: 100px;
 }
