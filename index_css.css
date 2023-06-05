@@ -49,13 +49,6 @@ body{
     text-decoration: none;
     color: #333;
   }
-  .menu-item.has-dropdown.arrowed{
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-  }
-  
   .menu-item.has-dropdown:hover .dropdown-menu {
     display: block;
   }
@@ -73,3 +66,14 @@ body{
     margin: 5px 0;
   }
 
+  .menu li.has-dropdown {
+    position: relative;
+  }
+  
+  .menu li.has-dropdown::after {
+    content: "\25BE"; /* Flèche vers le bas en utilisant le caractère Unicode */
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+  }
