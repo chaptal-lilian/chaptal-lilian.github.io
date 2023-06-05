@@ -67,14 +67,3 @@ body{
     margin: 5px 0;
   }
 
-  /*.menu li.has-dropdown > a::after {
-    content: "\25BC"; 
-    display: inline-block;
-    margin-left: 3px;
-    transform: rotate(45deg);
-  }
-  .menu li.has-dropdown > a::after {
-    font-size: 10px;
-    line-height: 1;
-    vertical-align: middle;
-  }*/
