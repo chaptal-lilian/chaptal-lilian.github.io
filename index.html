@@ -48,20 +48,6 @@ dropdownItems.forEach(item => {
   });
 });
 
-var ddItems = document.querySelectorAll('.has-dropdown');
-
-ddItems.forEach(Item => {
-  Item.addEventListener('mouseover', () => {
-    const arrow = Item.querySelector("::after");
-    arrow.style.color = "green";
-  });
-
-  Item.addEventListener('mouseout', () => {
-    const arrow = Item.querySelector("::after");
-    arrow.style.color = "";
-  });
-});
-
 var menuItems = document.querySelectorAll('.menu li a');
 
 menuItems.forEach(function(item) {
