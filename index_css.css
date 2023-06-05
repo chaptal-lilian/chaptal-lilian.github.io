@@ -38,9 +38,6 @@ body{
     color: #333;
     transition: color 0.3s ease;
 }
-.menu li a:hover{
-    color:gray;
-}
 .menu-item {
     display: inline-block;
     margin-right: 10px;
