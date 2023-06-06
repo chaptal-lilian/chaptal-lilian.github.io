@@ -156,7 +156,9 @@ body{
     
   /* carte google maps sur la page contact .............................................................................................................*/
   #map{
-    width: 400px;
-  height: 400px;
-  float: left;
+    width: 400px; /* Définir la largeur du carré de la carte */
+    height: 400px; /* Définir la hauteur du carré de la carte */
+    float: left; /* Placer la carte à gauche */
+    border: 1px solid black; 
+    margin-top: 50px;
   }
