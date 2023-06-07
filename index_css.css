@@ -154,3 +154,19 @@ body{
     font-weight: bold;
   }
     
+
+/* Transitions entre les pages ....................................................................................................*/
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in-animation 0.5s ease-in forwards;
+}
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

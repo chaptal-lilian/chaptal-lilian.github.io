@@ -6,7 +6,7 @@
             <link rel="stylesheet" href="index_css.css" type="text/css" media="all" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
-    <body>
+    <body class="fade-in">
         <div class="container">
                 <div class="header">
                         <div class="image-contain">
@@ -149,6 +149,14 @@ logo.addEventListener('mouseleave', () => {
   textContainer.style.transform = 'translateX(100%)';
   sideElements.forEach(element => {
     element.classList.remove('shifted');
+  });
+});
+
+//Transitions pages
+window.addEventListener('load', function() {
+  var elements = document.querySelectorAll('.fade-in');
+  elements.forEach(function(element) {
+    element.classList.add('fade-in');
   });
 });
 
