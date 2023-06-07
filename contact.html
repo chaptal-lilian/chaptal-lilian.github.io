@@ -80,9 +80,9 @@
                 <input type="text" id="company" name="company" placeholder="Le nom de l'entreprise" required>
                 <label>Adresse mail:<input type="email" name="email" placeholder="Votre adresse mail"></label>
 
-                <label>Message:<textarea name="message" placeholder="Votre message..."></textarea></label>
+                <label>Message:<textarea name="message" id="message" placeholder="Votre message..."></textarea></label>
 
-                <button type="submit">Envoyer</button>
+                <button type="submit" id="bouton-envoyer">Envoyer</button>
             </form>
         </div>
         </div>
@@ -207,6 +207,20 @@ logo.addEventListener('mouseleave', () => {
   sideElements.forEach(element => {
     element.classList.remove('shifted');
   });
+});
+
+// Réinitialisation du formulaire apres clic envoyer ..........................................................................
+var boutonEnvoyer = document.getElementById('bouton-envoyer');
+
+boutonEnvoyer.addEventListener('click', function() {
+  // Réinitialiser les valeurs des champs de formulaire
+  document.getElementById('fname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('lname').value = '';
+  document.getElementById('phone').value = '';
+  document.getElementById('company').value = '';
+  document.getElementById('message').value = '';
+  // Réinitialiser les autres champs de formulaire
 });
 
 </script>
