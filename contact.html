@@ -210,11 +210,26 @@ logo.addEventListener('mouseleave', () => {
 });
 
 // Réinitialisation du formulaire apres clic envoyer ..........................................................................
-var form = document.getElementById('contactForm'); // Remplacez 'votre-formulaire' par l'ID réel de votre formulaire
+var form = document.getElementById('my-form');
 
-form.addEventListener('submit', function(event) {
-  form.reset(); // Réinitialise les champs du formulaire
-});
+  // Ajouter un écouteur d'événement pour l'événement "reset" du formulaire
+  form.addEventListener('reset', function() {
+    // Réinitialiser les valeurs des champs du formulaire
+      setTimeout(function() {
+      form.reset();
+    }, 0);
+  });
+
+  // Ajouter un écouteur d'événement pour l'événement "submit" du formulaire
+  form.addEventListener('submit', function(event) {
+    // Empêcher le comportement par défaut du formulaire de se soumettre
+    event.preventDefault();
+
+    // Envoyer le formulaire (vous pouvez utiliser votre propre logique d'envoi ici)
+
+    // Réinitialiser le formulaire en déclenchant l'événement "reset"
+    form.dispatchEvent(new Event('reset'));
+  });
 
 // Transitions pages
 window.addEventListener('load', function() {
