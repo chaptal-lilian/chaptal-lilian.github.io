@@ -57,8 +57,34 @@
                         </ul>
                 </div>  
         </div>  
+        <!-- nouveaux éléments par rapport à la page de base .............................................................................................................................................; -->
+        <div class="contain_contact">
         <div id="map">
+        </div>
+        <div class="contact-form">
+            <h3>Contactez-nous :</h3>
+            <div class="error-message"></div>
+            <div class="success-message"></div>
+            <form action="https://formspree.io/f/xdovrpwk" method="POST" id="contactForm">
 
+                <label for="fname">Prénom :</label>
+                <input type="text" id="fname" name="fname" placeholder="Votre prénom" required>
+
+                <label for="lname">Nom :</label>
+                <input type="text" id="lname" name="lname" placeholder="Votre nom" required>
+
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+
+                <label for="company">Nom de l'entreprise :</label>
+                <input type="text" id="company" name="company" placeholder="Le nom de l'entreprise" required>
+                <label>Adresse mail:<input type="email" name="email" placeholder="Votre adresse mail"></label>
+
+                <label>Message:<textarea name="message" placeholder="Votre message..."></textarea></label>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
         </div>
 
 
