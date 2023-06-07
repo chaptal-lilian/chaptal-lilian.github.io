@@ -210,9 +210,7 @@ logo.addEventListener('mouseleave', () => {
 });
 
 // Réinitialisation du formulaire apres clic envoyer ..........................................................................
-var boutonEnvoyer = document.getElementById('bouton-envoyer');
-
-boutonEnvoyer.addEventListener('click', function() {
+window.onbeforeunload = function() {
   // Réinitialiser les valeurs des champs de formulaire
   document.getElementById('fname').value = '';
   document.getElementById('email').value = '';
@@ -220,7 +218,6 @@ boutonEnvoyer.addEventListener('click', function() {
   document.getElementById('phone').value = '';
   document.getElementById('company').value = '';
   document.getElementById('message').value = '';
-  // Réinitialiser les autres champs de formulaire
-});
+};
 
 </script>
