@@ -60,37 +60,46 @@
         <!-- nouveaux éléments par rapport à la page de base .............................................................................................................................................; -->
         <div class="contain_contact">
         <div id="map">
+            <!-- carte OpenstreetMap -->
         </div>
         <div class="contact-form">
+            <!-- formulaire de contact avec Formspree -->
             <h3 data-lang='{"fr": "Contactez-nous :",
             "eng" : "Contact us :", "esp" : "Contáctenos :", "ita" : "Contattaci :"}'>Contactez-nous :</h3>
             <div class="error-message"></div>
             <div class="success-message"></div>
             <form action="https://formspree.io/f/xdovrpwk" method="POST" target="_blank" id="contactForm">
-
+                <!-- case prénom -->
                 <label for="fname" data-lang='{"fr": "Prénom :",
                 "eng" : "First Name :", "esp" : "Nombre :", "ita" : "Nome :"}'>Prénom :</label>
                 <input type="text" id="fname" name="fname" placeholder="Votre prénom" required>
 
+                <!-- case nom de famille -->
                 <label for="lname" data-lang='{"fr": "Nom :",
                 "eng" : "Last Name :", "esp" : "Apellido :", "ita" : "Cognome :"}'>Nom :</label>
                 <input type="text" id="lname" name="lname" placeholder="Votre nom" required>
 
+                <!-- case n° de tel -->
                 <label for="phone" data-lang='{"fr": "Votre numéro de téléphone",
                 "eng" : "Your phone number", "esp" : "Su número de teléfono", "ita" : "Il tuo numero di telefono"}'>Téléphone :</label>
                 <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
 
+                <!-- case nom de l'entreprise -->
                 <label for="company" data-lang='{"fr": "Le nom de l entreprise",
                 "eng" : "The name of the company", "esp" : "El nombre de la compañía", "ita" : "Il nome dell azienda"}'>Nom de l'entreprise :</label>
                 <input type="text" id="company" name="company" placeholder="Le nom de l'entreprise" required>
+
+                <!-- case adresse mail -->
                 <label for="email" data-lang='{"fr": "Votre adresse mail :",
                 "eng" : "Your email :", "esp" : "Tu correo electrónico :", "ita" : "La tua email :"}'>Adresse mail:</label>
                 <input type="email" name="email" placeholder="Votre adresse mail">
 
+                <!-- case message -->
                 <label for="message" data-lang='{"fr": "Votre message...","eng" : "Your message...", 
                 "esp" : "Vuestro mensaje...:", "ita" : "Il tuo messaggio..."}'>Message:</label>
                 <textarea name="message" id="message" placeholder="Votre message..."></textarea>
 
+                <!-- bouton envoyer -->
                 <button type="submit" id="bouton-envoyer" data-lang='{"fr": "Envoyer",
                 "eng" : "Send", "esp" : "Enviar", "ita" : "Mandare"}'>Envoyer</button>
             </form>

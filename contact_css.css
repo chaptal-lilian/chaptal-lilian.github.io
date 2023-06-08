@@ -165,7 +165,7 @@ body{
     height: 500px; /* Définir la hauteur du carré de la carte */
     float: left; /* Placer la carte à gauche */
     border: 1px solid black; 
-    margin-top: 50px;
+    margin-top: 80px;
   }
 
   /* formulaire de contact ........................................................................................................................................*/
@@ -186,7 +186,7 @@ body{
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -211,7 +211,7 @@ body{
 
 .fade-in {
     opacity: 0;
-    animation: fade-in-animation 0.5s ease-in forwards;
+    animation: fade-in-animation 0.8s ease-in forwards;
   }
   
   @keyframes fade-in-animation {

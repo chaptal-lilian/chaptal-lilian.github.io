@@ -170,3 +170,17 @@ body{
     opacity: 1;
   }
 }
+
+/* nouveau code css .........................................................................................................................;;;;*/
+
+.contain-varietes{
+    display: flex;
+    color: white;
+}
+#greffables{
+    float: left;
+}
+#greffons{
+    float: left;
+    margin-left: 200px;
+}

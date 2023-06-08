@@ -3,7 +3,7 @@
     <head>
             <title>Marie-Christine Niel</title>
             <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-            <link rel="stylesheet" href="index_css.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="nos-varietes.css" type="text/css" media="all" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body class="fade-in">
@@ -50,17 +50,44 @@
                                 "eng" : "History", "esp" : "Historia", "ita" : "Storia"}'>Histoire</a></li>
                               <li class="menu-item"><a href="" data-lang='{"fr" : "Nos variétés",
                                 "eng" : "Our varieties", "esp" : "Nuestras variedades", "ita" : "Le nostre varietà"}'>Nos variétés</a></li>
-                              <li class="menu-item"><a href="nos-varietes.html" data-lang='{"fr" : "Nous contacter",
+                              <li class="menu-item"><a href="contact.html" data-lang='{"fr" : "Nous contacter",
                                 "eng" : "Contact us", "esp" : "Contáctenos", "ita" : "Contattaci"}'>Nous contacter</a></li>
                         </ul>
                 </div>  
-        </div> 
-        <!-- fin du code commun a toutes les pages ............................................................--> 
-
+        </div>  
+        <!-- Nouveau code html différent des autres ................................................-->
+        <div class="contain-varietes">
+            <div id="greffables">
+                <ul>
+                    <li><b>GRAVESAC</b> numéro 264</li><br>
+                    <li><b>SO4</b> numéro 762</li><br>
+                    <li><b>RUPESTRIS DU LOT</b> numéro 235</li><br>
+                    <li><b>333EM</b> numéro 263</li><br>
+                    <li><b>3309 COUDERC</b> numéro 1160</li><br>
+                    <li><b>RUGGERI 140</b> numéro 265</li><br>
+                    <li><b>FERCAL</b> numéro 242</li><br>
+                    <li><b>PAULSEN 1103</b> numéro 768</li><br>
+                    <li><b>101-14 MGT</b> numéro 1034</li><br>
+                    <li><b>RIP GLOIRE MONTPELL.</b> numéro 1030</li><br>
+                    <li><b>41B MGT</b> numéro 153</li><br>
+                    <li><b>RICHTER 110</b> numéro 152</li>
+                </ul>
+            </div>
+            <div id="greffons">
+                <ul>
+                    <li><b>SAUVIGNON BLANC</b> numéros : 108, 240, 242, 376, 905, 906</li><br>
+                    <li><b>GRENACHE BLANC</b> numéros : 141, 148</li><br>
+                    <li><b>CINSAUT</b> numéros : 003, 252</li><br>
+                    <li><b>SYRAH</b> numéros : 524, 747</li>
+                </ul>
+            </div>
+        </div>  
     </body>
 </html>
 
 <script>
+// code js commun à toutes les pages..................................................................................
+
 //vitesse de déplacement des menus déroulants
 const dropdownItems = document.querySelectorAll('.has-dropdown');
 let timeoutId;
@@ -161,5 +188,7 @@ window.addEventListener('load', function() {
     element.classList.add('fade-in');
   });
 });
+
+// fin du code js commun à toutes les pages..................................................................................
 
 </script>
