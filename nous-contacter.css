@@ -166,6 +166,7 @@ body{
     float: left; /* Placer la carte à gauche */
     border: 1px solid black; 
     margin-top: 80px;
+    margin-bottom: 60px;
   }
 
   /* formulaire de contact ........................................................................................................................................*/
@@ -186,7 +187,7 @@ body{
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -225,3 +226,49 @@ body{
       opacity: 1;
     }
   }
+
+  /* Bloc sous toutes les pages pour les infos et l'adresse ...............................................*/
+
+  .footer {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    bottom: 0;
+  }
+  
+  .marker-icon {
+    margin-right: 20px;
+  }
+  
+  .marker-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .text-content-info {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .text-content-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .text-content-info p {
+    margin-bottom: 5px;
+  }
+  
+  .text-content-info a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .text-content-info a:hover {
+    text-decoration: underline;
+  }  
