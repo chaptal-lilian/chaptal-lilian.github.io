@@ -4,7 +4,6 @@
             <title>Marie-Christine Niel</title>
             <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
             <link rel="stylesheet" href="bgreffables.css" type="text/css" media="all" />
-            <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
             <link rel="stylesheet" type="text/css" href="lib/slick-1.8.1/slick-1.8.1/slick/slick.css"/>
             <script src="lib/slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -77,27 +76,8 @@
                 <img src="MCN.png" alt="Image 3">
                 <h3>Image 3</h3>
             </div>
-        </div>                 
-<script>
-    $(document).ready(function(){
-  $('.carousel').slick({
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: true,
-    arrows: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false
-        }
-      }
-    ]
-  });
-});
-</script>
+        </div> 
+
         <div class="footer">
           <div class="marker-icon">
             <img src="icone_marqueur.png" alt="Marqueur de carte">
@@ -107,6 +87,38 @@
             <p>1037 chemin du Mas de Borne, 30720 Ribaute-les-Tavernes</p>
             <p><a href="tel:+0682180410">06 82 18 04 10</a></p>
           </div>
+          <script>
+            $(document).ready(function() {
+    $('.carousel').each(function() {
+      var $carousel = $(this);
+      var $items = $carousel.find('.carousel-item');
+      var currentIndex = 0;
+      var totalItems = $items.length;
+
+      function showCurrentItem() {
+        $items.hide();
+        $items.eq(currentIndex).show();
+      }
+
+      function showNextItem() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showCurrentItem();
+      }
+
+      function showPreviousItem() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        showCurrentItem();
+      }
+
+      $carousel.find('.carousel-item:not(:first)').hide();
+      $carousel.append('<button class="carousel-prev">Prev</button>');
+      $carousel.append('<button class="carousel-next">Next</button>');
+
+      $carousel.find('.carousel-next').click(showNextItem);
+      $carousel.find('.carousel-prev').click(showPreviousItem);
+    });
+  });
+          </script>
     </body>
 </html>
 

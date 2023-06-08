@@ -224,22 +224,15 @@ body{
 /* nouveau code */
 
 .carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .carousel img {
     width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .carousel-item img {
-    max-width: 100%;
     height: auto;
   }
   
-  .carousel-item h3 {
-    margin-top: 10px;
+  .carousel h3 {
+    text-align: center;
   }
