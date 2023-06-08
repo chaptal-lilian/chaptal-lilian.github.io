@@ -235,4 +235,35 @@ body{
   
   .carousel h3 {
     text-align: center;
+    color: white;
+  }arousel .slick-prev {
+    left: 0; /* Positionner le bouton "Previous" à gauche */
+    z-index: 1; /* Assurer que le bouton est visible sur l'image */
+  }
+  
+  .carousel .slick-next {
+    right: 0; /* Positionner le bouton "Next" à droite */
+    z-index: 1; /* Assurer que le bouton est visible sur l'image */
+  }
+  .carousel-thumbnails .slick-slide {
+    margin-right: 10px; /* Ajouter un espace entre les miniatures */
+  }
+  
+  .carousel-thumbnails .slick-slide:last-child {
+    margin-right: 0; /* Supprimer la marge de droite pour la dernière miniature */
+  }
+
+.carousel-thumbnails {
+    margin-top: 10px;
+  }
+  
+  .carousel-thumbnails li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .carousel-thumbnails img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
   }
