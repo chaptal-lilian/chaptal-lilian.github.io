@@ -1,0 +1,245 @@
+@charset "ISO-8859-1";
+html, body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body{
+    flex: 1;
+    background-image: url("photo_vigne_1.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.container{
+    min-height: 100%;
+}
+.header{
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+.header img{
+    margin-right: 10px;
+}
+.header h3{
+    margin: 0;
+    flex-shrink: 0;
+}
+
+
+
+
+/* décalage d'image et de texte en haut, logo et titre Pepinieriste etc............................................... */
+.image-contain{
+  position: relative;
+  display: inline-block;
+}
+.text-contain{
+  position:absolute;
+  text-align: center;
+  top: 0;
+  right: -104%;
+  width: 100px;
+  height: 93%;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-100%);
+}
+.text-contain p{
+  font-weight: bold;
+}
+.image-contain:hover .text-contain{
+  opacity: 1;
+  transform: translateX(0);
+}
+.main_title{
+  transition: transform 0.2s ease;
+}
+.main_title.shifted {
+  transform: translateX(30%);
+}
+
+
+/* gestion des onglets et leurs menus déroulants ....................................................................................*/
+.menu-container {
+    width: 100%;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+.menu-item, .menu-item.menu-item.has-dropdown{
+    display: inline-block;
+    margin-right: 70px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+  
+  .menu-item a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #333;
+  }
+  .menu-item.has-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: gray;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  .dropdown-menu li {
+    margin: 5px;
+  }
+
+  .menu li.has-dropdown {
+    position: relative;
+  }
+  
+  .menu li.has-dropdown::after {
+    content: "\25BE"; /* Flèche vers le bas en utilisant le caractère Unicode */
+    position: absolute;
+    color: white;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    transition: color 0.3s;
+  }
+  .menu li:hover a,
+.menu li:hover::after {
+    transition: color 0.3s;
+}
+
+/* gestion de la langue du site ....................................................................................................;*/
+.language-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .language-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .language-menu li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .language-menu a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+  }
+  .language-menu a.active {
+    font-weight: bold;
+  }
+    
+
+/* Transitions entre les pages ....................................................................................................*/
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in-animation 0.6s ease-in forwards;
+}
+.fade-in2{
+  opacity: 0;
+  animation: fade-in-animation 1s ease-in forwards;
+}
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Bloc sous toutes les pages pour les infos et l'adresse ...............................................*/
+
+.footer {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  bottom: 0;
+}
+
+.marker-icon {
+  margin-right: 20px;
+}
+
+.marker-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.text-content-info {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-content-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.text-content-info p {
+  margin-bottom: 5px;
+}
+
+.text-content-info a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.text-content-info a:hover {
+  text-decoration: underline;
+}  
+
+/* nouveau code */
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .carousel-item h3 {
+    margin-top: 10px;
+  }
