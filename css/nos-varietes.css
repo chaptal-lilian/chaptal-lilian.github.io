@@ -6,7 +6,7 @@ html, body{
 }
 body{
     flex: 1;
-    background-image: url("photo_vigne_1.JPG");
+    background-image: url("C:\\Users\\lilir\\Desktop\\jsprojects\\new_website\\pic\\bouture1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -159,11 +159,7 @@ body{
 
 .fade-in {
   opacity: 0;
-  animation: fade-in-animation 0.6s ease-in forwards;
-}
-.fade-in2{
-  opacity: 0;
-  animation: fade-in-animation 1s ease-in forwards;
+  animation: fade-in-animation 0.8s ease-in forwards;
 }
 
 @keyframes fade-in-animation {
@@ -175,48 +171,65 @@ body{
   }
 }
 
+/* nouveau code css .........................................................................................................................;;;;*/
+
+.contain-varietes{
+    display: flex;
+    color: white;
+}
+.contain-varietes h3{
+    text-decoration: underline;
+}
+#greffables{
+    float: left;
+}
+#greffons{
+    float: left;
+    margin-left: 200px;
+}
+
 /* Bloc sous toutes les pages pour les infos et l'adresse ...............................................*/
 
 .footer {
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  bottom: 0;
-}
-
-.marker-icon {
-  margin-right: 20px;
-}
-
-.marker-icon img {
-  width: 30px;
-  height: 30px;
-}
-
-.text-content-info {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  text-align: center;
-}
-
-.text-content-info h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.text-content-info p {
-  margin-bottom: 5px;
-}
-
-.text-content-info a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.text-content-info a:hover {
-  text-decoration: underline;
-}  
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    bottom: 0;
+  }
+  
+  .marker-icon {
+    margin-right: 20px;
+  }
+  
+  .marker-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .text-content-info {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .text-content-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .text-content-info p {
+    margin-bottom: 5px;
+  }
+  
+  .text-content-info a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .text-content-info a:hover {
+    text-decoration: underline;
+  }  

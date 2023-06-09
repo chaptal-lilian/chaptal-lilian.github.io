@@ -6,7 +6,7 @@ html, body{
 }
 body{
     flex: 1;
-    background-image: url("photo_vigne_1.JPG");
+    background-image: url("C:\\Users\\lilir\\Desktop\\jsprojects\\new_website\\pic\\bouture1.jpg    ");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -256,5 +256,73 @@ body{
   .story p{
     color: white;
     font-family: 'Playfair Display', sans-serif;
-    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
   }
+
+  .story-contain {
+    position: relative;
+    background-color: #f2f2f2;
+    padding: 10px;
+    transition: max-height 1s ease;
+    max-height: 30px;
+    overflow: hidden;
+  }
+  
+  .head-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head-story h3{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    width: 20px;
+    height: 20px;
+    background-image: url('C:/Users/lilir/Desktop/jsprojects/new_website/pic/fleche_n.png');
+    background-size: cover;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .story-content {
+    margin-top: 10px;
+  }
+  
+  .expand {
+    max-height: 500px; /* Ajustez cette valeur en fonction de la taille du paragraphe */
+  }
+
+ /* Mentions */
+
+.mentions-contain {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  transition: max-height 0.5s ease;
+  max-height: 30px;
+  overflow: hidden;
+  float: left; 
+  border: 2px solid black;
+}
+
+.head-mentions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-mentions h3{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+
+
+.mentions-content {
+  margin-top: 20px;
+}
