@@ -267,6 +267,7 @@ pointer-events: none;
 }
 .carousel-container{
   max-width: 1200px;  
+  margin-top: 10px;
   position: relative;
 }
 
@@ -291,5 +292,18 @@ pointer-events: none;
   .carousel-images img{
     width: 100%;
 
+  }
+}
+/* Styles pour les appareils de taille moyenne */
+@media (min-width: 768px) {
+  .carousel-container {
+    margin-top: 20px;
+  }
+}
+
+/* Styles pour les appareils de grande taille */
+@media (min-width: 1024px) {
+  .carousel-container {
+    margin-top: 30px;
   }
 }

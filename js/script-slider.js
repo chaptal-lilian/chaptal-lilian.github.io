@@ -2,7 +2,7 @@
     firstImg = carousel.querySelector("img");
     arrowIcons = document.querySelectorAll(".carousel-container i");
 
-    let isDragStart = false, prevPageX, prevScrollLeft, positionDiff;
+    let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 
     const showHideIcons = () => {
         let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // get max scrollable width
@@ -20,21 +20,8 @@
                 carousel.scrollLeft += firstImgWidth;
             }
             setTimeout(() => showHideIcons(), 60); // call function after 60ms
-
         })
     });
-
-    const autoSlide = () => {
-        positionDiff = Math.abs(positionDiff);
-        let firstImgWidth = firstImg.clientWidth + 14;
-        let valDifference = firstImgWidth - positionDiff;
-
-        if(carousel.scrollLeft > prevScrollLeft){ // user is scrolling to the right
-            return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-        }
-        // user is scrolling to the left
-        carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
 
     const dragStart = (e) => {
         isDragStart = true;
@@ -54,7 +41,6 @@
     const dragStop = () => {
         isDragStart = false;
         carousel.classList.remove("dragging");
-        autoSlide();
     }
 
     carousel.addEventListener("mousedown", dragStart);
