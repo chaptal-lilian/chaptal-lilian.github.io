@@ -6,7 +6,7 @@ html, body{
 }
 body{
     flex: 1;
-    background-image: url("C:\\Users\\lilir\\Desktop\\jsprojects\\new_website\\pic\\bouture1.jpg    ");
+    background-image: url("https://chaptal-lilian.github.io/pic/bouture1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -283,7 +283,7 @@ body{
   .arrow {
     width: 20px;
     height: 20px;
-    background-image: url('C:/Users/lilir/Desktop/jsprojects/new_website/pic/fleche_n.png');
+    background-image: url('https://chaptal-lilian.github.io/pic/fleche_n.png');
     background-size: cover;
     cursor: pointer;
     float: right;
@@ -321,7 +321,6 @@ body{
   align-items: center;
   text-decoration: underline;
 }
-
 
 .mentions-content {
   margin-top: 20px;

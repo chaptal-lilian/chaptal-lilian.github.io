@@ -249,7 +249,7 @@ body{
 .arrow {
   width: 20px;
   height: 20px;
-  background-image: url('C:/Users/lilir/Desktop/jsprojects/new_website/pic/fleche_n.png');
+  background-image: url('https://chaptal-lilian.github.io/pic/fleche_n.png');
   background-size: cover;
   cursor: pointer;
   float: right;
