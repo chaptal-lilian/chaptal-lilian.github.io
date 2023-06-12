@@ -223,47 +223,73 @@ body{
 
 /* nouveau code */
 
-.carousel {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .carousel img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .carousel h3 {
-    text-align: center;
-    color: white;
-  }arousel .slick-prev {
-    left: 0; /* Positionner le bouton "Previous" à gauche */
-    z-index: 1; /* Assurer que le bouton est visible sur l'image */
-  }
-  
-  .carousel .slick-next {
-    right: 0; /* Positionner le bouton "Next" à droite */
-    z-index: 1; /* Assurer que le bouton est visible sur l'image */
-  }
-  .carousel-thumbnails .slick-slide {
-    margin-right: 10px; /* Ajouter un espace entre les miniatures */
-  }
-  
-  .carousel-thumbnails .slick-slide:last-child {
-    margin-right: 0; /* Supprimer la marge de droite pour la dernière miniature */
-  }
+.all-carousel{
+display: flex;
+padding: 0 35px;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+}
+.carousel-container .carousel-images{
+  cursor: pointer;
+  font-size: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.carousel-container i{
+  top: 50%;
+  height: 46px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background: white;
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.carousel-container.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel-container.dragging img{
+pointer-events: none;
+}
+.carousel-container i:first-child{
+  left: -23px;
+  display: none;
+}
+.carousel-container i:last-child{
+  right: -23px;
+}
+.carousel-container{
+  max-width: 1200px;  
+  position: relative;
+}
 
-.carousel-thumbnails {
-    margin-top: 10px;
+.carousel-images img{
+  height: 400px;
+  object-fit: cover;
+  width: calc(100% / 3);
+  margin-left: 14px;
+}
+
+.carousel-images img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel-images img{
+    width: calc(100% / 2);
+
   }
-  
-  .carousel-thumbnails li {
-    display: inline-block;
-    margin-right: 10px;
+}
+@media screen and (max-width: 550px) {
+  .carousel-images img{
+    width: 100%;
+
   }
-  
-  .carousel-thumbnails img {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-  }
+}
