@@ -6,7 +6,7 @@ html, body{
 }
 body{
     flex: 1;
-    background-image: url("pic\\bouture1.jpg");
+    background-image: url("pic/bouture1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
