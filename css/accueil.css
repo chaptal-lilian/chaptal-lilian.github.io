@@ -129,7 +129,7 @@ body{
 
 /* gestion de la langue du site ....................................................................................................;*/
 .language-menu {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
   }
@@ -182,6 +182,7 @@ body{
   padding: 20px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 90%;
@@ -230,7 +231,7 @@ body{
   transition: max-height 0.5s ease;
   max-height: 30px;
   overflow: hidden;
-  float: left; 
+  float: right; 
   border: 2px solid black;
 }
 
@@ -254,7 +255,6 @@ body{
   cursor: pointer;
   float: right;
 }
-
 
 .mentions-content {
   margin-top: 20px;

@@ -3,6 +3,7 @@
     <head>
             <title>Marie-Christine Niel</title>
             <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+            <meta name="viewport" content="width=device-width, initial-scale=0.4">
             <link rel="stylesheet" href="css/bgreffables.css" type="text/css" media="all" />
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="lib/slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
@@ -102,6 +103,14 @@
               <a href="https://www.flaticon.com/fr/icones-gratuites/italie" title="italie icônes">Italie icônes créées par Freepik - Flaticon</a>
             </div>
           </div>
+          <script>
+            const arrow = document.querySelector('.arrow');
+            const container = document.querySelector('.mentions-contain');
+
+            arrow.addEventListener('click', () => {
+                container.classList.toggle('expand');
+            });
+          </script>
     </body>
 </html>
 

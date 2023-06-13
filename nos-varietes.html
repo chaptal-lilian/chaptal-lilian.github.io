@@ -109,6 +109,14 @@
               <a href="https://www.flaticon.com/fr/icones-gratuites/italie" title="italie icônes">Italie icônes créées par Freepik - Flaticon</a>
             </div>
           </div>
+          <script>
+            const arrow = document.querySelector('.arrow');
+            const container = document.querySelector('.mentions-contain');
+
+            arrow.addEventListener('click', () => {
+                container.classList.toggle('expand');
+            });
+          </script>
     </body>
 </html>
 

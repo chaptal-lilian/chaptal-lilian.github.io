@@ -2,7 +2,6 @@
 html, body{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 body{
     flex: 1;
@@ -18,7 +17,8 @@ body{
     border-bottom: 1px solid black;
     display: flex;
     align-items: center;
-}
+    margin-bottom: 0;
+  }
 .header img{
     margin-right: 10px;
 }
@@ -128,10 +128,11 @@ body{
 }
 
 /* gestion de la langue du site ....................................................................................................;*/
+
 .language-menu {
-    position: fixed;
     top: 10px;
     right: 10px;
+    position: absolute;
   }
   
   .language-menu ul {
@@ -182,6 +183,7 @@ body{
   padding: 20px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 90%;
@@ -220,6 +222,50 @@ body{
 .text-content-info a:hover {
   text-decoration: underline;
 }  
+
+/* Mentions */
+
+.mentions-contain {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  transition: max-height 0.5s ease;
+  max-height: 30px;
+  overflow: hidden;
+  float: right; 
+  border: 2px solid black;
+}
+
+.head-mentions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-mentions h3{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  background-image: url('https://chaptal-lilian.github.io/pic/fleche_n.png');
+  background-size: cover;
+  cursor: pointer;
+  float: right;
+}
+
+
+.mentions-content {
+  margin-top: 20px;
+}
+
+.expand {
+  max-height: 200px; /* Ajustez cette valeur en fonction de la taille du paragraphe */
+}
+
 
 /* nouveau code */
 
@@ -267,10 +313,12 @@ pointer-events: none;
 }
 .carousel-container{
   max-width: 1200px;  
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
 }
-
 .carousel-images img{
   height: 400px;
   object-fit: cover;
@@ -285,25 +333,10 @@ pointer-events: none;
 @media screen and (max-width: 900px) {
   .carousel-images img{
     width: calc(100% / 2);
-
   }
 }
 @media screen and (max-width: 550px) {
   .carousel-images img{
     width: 100%;
-
-  }
-}
-/* Styles pour les appareils de taille moyenne */
-@media (min-width: 768px) {
-  .carousel-container {
-    margin-top: 20px;
-  }
-}
-
-/* Styles pour les appareils de grande taille */
-@media (min-width: 1024px) {
-  .carousel-container {
-    margin-top: 30px;
   }
 }

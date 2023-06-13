@@ -129,7 +129,7 @@ body{
 
 /* gestion de la langue du site ....................................................................................................;*/
 .language-menu {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
   }
@@ -171,6 +171,49 @@ body{
   }
 }
 
+/* Mentions */
+
+.mentions-contain {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  transition: max-height 0.5s ease;
+  max-height: 30px;
+  overflow: hidden;
+  float: right; 
+  border: 2px solid black;
+}
+
+.head-mentions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-mentions h3{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  background-image: url('https://chaptal-lilian.github.io/pic/fleche_n.png');
+  background-size: cover;
+  cursor: pointer;
+  float: right;
+}
+
+
+.mentions-content {
+  margin-top: 20px;
+}
+
+.expand {
+  max-height: 200px; /* Ajustez cette valeur en fonction de la taille du paragraphe */
+}
+
 /* nouveau code css .........................................................................................................................;;;;*/
 
 .contain-varietes{
@@ -195,6 +238,7 @@ body{
     padding: 20px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
