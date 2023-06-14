@@ -195,6 +195,10 @@ section .cards .card {
 .histoire .cards .card {
   padding: 0 0 20px;
 }
+.histoire i{
+  display: flex;
+  align-items: center;
+}
 
 .produits .card img {
   width: 120px;
@@ -392,10 +396,16 @@ footer a {
   margin: 0;
   list-style: none;
 }
-
-.langue-dropdown:hover .langue-menu {
+.langue-menu.show{
   display: block;
 }
+.langue-ong.show{
+  display: block;
+}
+
+/*.langue-dropdown:hover .langue-menu {
+  display: block;
+}*/
 
 .language-flag {
   width: 30px;
@@ -472,4 +482,23 @@ footer a {
     object-fit: cover;
     width: calc(100% / 3);
     margin-left: 14px;
+  }
+
+  @media screen and (max-width: 900px) {
+    .carousel-images img{
+      width: calc(100% / 2);
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .carousel-images img{
+      width: 100%;
+    }
+  }
+
+  @font-face {
+    font-family: "Playfair";
+    src: url("font/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  }
+  .story-content p{
+    font-family: "Playfair", sans-serif;
   }
