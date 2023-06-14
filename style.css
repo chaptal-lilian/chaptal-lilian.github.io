@@ -505,8 +505,9 @@ footer a {
 
   /* carte openstreet map*/
   #map{
-    width: 500px; /* Définir la largeur du carré de la carte */
-    height: 260px; /* Définir la hauteur du carré de la carte */
+    width: 100%; /* Définir la largeur du carré de la carte */
+    height: 200px; /* Définir la hauteur du carré de la carte */
+    padding: 0 auto;
     float: left; /* Placer la carte à gauche */
     border: 1px solid black; 
   }
