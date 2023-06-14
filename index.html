@@ -8,6 +8,8 @@
     <script src="js/script-slider.js" defer></script>
     <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!--OpenStreetMap link for the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
   </head>
   <body>
     <header>
@@ -178,18 +180,23 @@
             <p><i class="fas fa-map-marker-alt"></i>1037 chemin du mas de borne, <br>   30720 Ribaute-les-Tavernes</p>
             <p><i class="fas fa-envelope"></i>mariechristineniel@gmail.com</p>
             <p><i class="fas fa-phone"></i><a href="tel:+33682180410">06 82 18 04 10</a></p>
-            <!--<p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
-            <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
-            <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-            <p><i class="fas fa-globe"></i> www.codingenpalweb.com</p>-->
-          </div>          
+          </div> 
+          <div id="map"><!-- carte OpenstreetMap --></div>         
         </div>
         <div class="col form">
           <form action="https://formspree.io/f/xdovrpwk" method="POST" target="_blank" id="contactForm">
-            <input type="text" placeholder="Nom*" required>
-            <input type="tel" placeholder="Tel*" required>
-            <input type="email" placeholder="Email*" required>
-            <textarea placeholder="Message*" required></textarea>
+            <!-- case nom de famille -->
+            <input type="text" id="name" name="name" placeholder="Nom*" required>
+
+            <!-- case n° de tel -->
+            <input type="tel" id="phone" name="phone" placeholder="Tel*" required>
+
+            <!-- case adresse mail -->
+            <input type="email" name="email" placeholder="Email*" required>
+
+            <!-- case message -->
+            <textarea name="message" id="message" placeholder="Message*" required></textarea>
+
             <button id="submit" type="submit">Envoyer</button>
           </form>
         </div>
@@ -251,7 +258,30 @@
             }
           }); 
     </script>
+    <!-- Partie javascript pour la carte -->
 
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <script type="text/javascript">
+    var lat = 44.052125264454254;
+    var lon = 4.081254071164483; 
+    var macarte = null;
+    function initMap() {
+                // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+                macarte = L.map('map').setView([lat, lon], 12);
+                // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+                L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                    // Il est toujours bien de laisser le lien vers la source des données
+                    attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                    minZoom: 1,
+                    maxZoom: 20
+                }).addTo(macarte);
+                var marker = L.marker([lat, lon]).addTo(macarte); //marqueur de position
+            }
+            window.onload = function(){
+		// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+		initMap(); 
+            };
+    </script>
 
   </body>
 </html>

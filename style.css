@@ -502,3 +502,11 @@ footer a {
   .story-content p{
     font-family: "Playfair", sans-serif;
   }
+
+  /* carte openstreet map*/
+  #map{
+    width: 500px; /* Définir la largeur du carré de la carte */
+    height: 260px; /* Définir la hauteur du carré de la carte */
+    float: left; /* Placer la carte à gauche */
+    border: 1px solid black; 
+  }
