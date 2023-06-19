@@ -77,7 +77,7 @@ header a:hover, footer a:hover {
   height: 100vh;
   width: 100%;
   position: relative;
-  background: url("images/bouture1.jpg");
+  background: url("images/Resized-20230116-143554.JPEG");
   background-position: center 65%;
   background-size: cover;
 }
@@ -163,8 +163,24 @@ section.varietes {
   margin: 0 auto;
   max-width: 1200px;
 }
+.varietes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.varietes .company-info {
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.col {
+  flex-basis: 50%;
+}
+
+.varietes .bgreffables {
   margin-top: 30px;
 }
 
