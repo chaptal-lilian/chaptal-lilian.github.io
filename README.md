@@ -1,32 +1,16 @@
-# First Website
+# React + Vite
 
-Here is my first real website that I coded during an internship of 1 month. I did this for my internship tutor to help her expand her business to a different type of customers.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Table of contents
+Currently, two official plugins are available:
 
-- [Insight](#insight)
-- [Functionalities](#functionalities)
-- [Screenshots](#screenshots)
-- [Use](#use)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Insight
+## React Compiler
 
-My website is mainly composed HTML, CSS and JavaScript. 
-I used links between sections to organize the page, an image slider, cards to illustrate the family in the company, a contact form and a Google map to find the company.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Functionalities
+## Expanding the ESLint configuration
 
-My website projet is simply giving more visibility to the company by displaying pictures and texts to attract a more "modern" customer base. 
-The main purpose is to make the customer sure that this company sells quality products.
-
-## Screenshots
-
-![image](https://github.com/chaptal-lilian/chaptal-lilian.github.io/assets/135231768/1e064213-220f-4a85-926b-f32b83e9bcad)
-![image](https://github.com/chaptal-lilian/chaptal-lilian.github.io/assets/135231768/4143f83c-3e39-4110-84e1-17954eba2249)
-![image](https://github.com/chaptal-lilian/chaptal-lilian.github.io/assets/135231768/4be06a1c-d87c-488b-a1d3-1aa321832665)
-![image](https://github.com/chaptal-lilian/chaptal-lilian.github.io/assets/135231768/2ec5d7ed-35c6-4026-bce6-3a019d3841b1)
-![image](https://github.com/chaptal-lilian/chaptal-lilian.github.io/assets/135231768/e7b0f968-d8c3-4fc6-a9e8-0e6ed8eb06fe)
-
-## Use
-
-You just have to click on the following link: http://www.niel-mc.fr
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
